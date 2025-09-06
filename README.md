@@ -19,9 +19,11 @@ It combines **port scanning, enumeration, reconnaissance, footprinting, and vuln
 
 1. Clone the repo
 bash
+
 git clone https://github.com/phinixvortex/phinixpolit.git
+
 cd phinixpolit
-````
+
 
 2. (Optional) Create a virtual environment
 
