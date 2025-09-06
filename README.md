@@ -1,28 +1,96 @@
-# PhinixPolit
+🔥 PhinixPolit
 
-PhinixPolit is a command-line cybersecurity multi-tool (Python) that provides:
-- Port scanning (basic socket scanner)
-- Vulnerability scanning (wraps `nmap --script vuln`)
-- Web scanning (wraps `nikto`)
-- SSL scanning (wraps `sslscan`)
-- Footprinting (WHOIS)
-- Reconnaissance (ping)
-- Enumeration (wraps `nmap -A`)
+**PhinixPolit** is a multifunctional cybersecurity tool written in Python.  
+It combines **port scanning, enumeration, reconnaissance, footprinting, and vulnerability scanning** into one terminal-based toolkit.  
 
-## Requirements
-- Python 3.8+
-- External tools (for full functionality): `nmap`, `nikto`, `sslscan`
-- Python packages: `colorama`, `python-whois` (package name may be `whois`)
-- Run with appropriate permissions and **only** against systems you own or have permission to test.
+---
 
-## Usage
-```bash
-python3 phinixpolit.py example.com --portscan
-python3 phinixpolit.py 1.2.3.4 -a   # run all scans (requires installed external tools)
-```
+🚀 Features
+- ✅ Colorful and interactive CLI interface (Matrix-style banner 🎉)  
+- ✅ Port scanning (with Python sockets & Nmap integration)  
+- ✅ WHOIS lookups for domains  
+- ✅ HTTP/HTTPS reconnaissance (headers, status codes, scraping)  
+- ✅ Vulnerability scanning (planned with Nmap & Nikto)  
+- ✅ Logging of all activities for later review  
 
-## Responsible Use
-This tool can be used for legitimate security testing and learning. Do **not** use it to scan or attack systems without explicit authorization. The author and contributors are not responsible for misuse.
+---
 
-## License
-MIT
+📦 Installation
+
+1. Clone the repo
+bash
+git clone https://github.com/phinixvortex/phinixpolit.git
+cd phinixpolit
+````
+
+2. (Optional) Create a virtual environment
+
+bash
+python3 -m venv venv
+source venv/bin/activate      # Linux/macOS
+.\venv\Scripts\activate       # Windows
+
+
+3. Install dependencies
+
+bash
+pip install --upgrade pip
+pip install -r requirements.txt
+
+
+---
+
+🛠️ Usage
+
+Run the tool from your terminal:
+
+bash
+python phinixpolit.py -h
+
+
+Example (scan a target):
+
+bash
+python phinixpolit.py -t example.com -p 80,443
+
+
+---
+
+📂 Project Structure
+
+
+phinixpolit/
+│
+├── phinixpolit.py        # Main tool code
+├── requirements.txt      # Python dependencies
+├── setup.py              # For packaging (optional)
+├── README.md             # Documentation
+├── .gitignore            # Ignored files/folders
+└── logs/                 # (planned) Scan logs and reports
+
+
+---
+
+🧑‍💻 Contributing
+
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you’d like to change.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+---
+
+📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+✨ Roadmap / Future Features
+
+* [ ] Nikto integration for web vulnerability scanning
+* [ ] Directory/file brute forcing
+* [ ] Automated report generation (HTML/PDF)
+* [ ] Shodan API integration
+* [ ] Improved multi-threaded scanning
+
